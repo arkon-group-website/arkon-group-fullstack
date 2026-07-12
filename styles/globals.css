@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #061426;
+  color: #eaf0f7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(200, 164, 93, 0.45);
+  color: white;
+}
+
+@layer components {
+  .arkon-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .arkon-eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.28em] text-arkon-gold;
+  }
+
+  .arkon-section-title {
+    @apply mt-3 text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl;
+  }
+
+  .arkon-card {
+    @apply rounded-sm border border-white/10 bg-white/[0.055] p-6 shadow-arkon backdrop-blur transition duration-300 hover:border-arkon-gold/45 hover:bg-white/[0.075];
+  }
+
+  .arkon-btn {
+    @apply inline-flex min-h-11 items-center justify-center rounded-sm px-5 py-3 text-center text-sm font-bold transition focus:outline-none focus:ring-2 focus:ring-arkon-gold focus:ring-offset-2 focus:ring-offset-arkon-navy;
+  }
+
+  .arkon-btn-gold {
+    @apply bg-arkon-gold text-arkon-navy hover:bg-arkon-gold2;
+  }
+
+  .arkon-btn-ghost {
+    @apply border border-white/15 bg-white/[0.045] text-white hover:border-arkon-gold hover:bg-white/[0.075];
+  }
+
+  .arkon-text-link {
+    @apply inline-flex text-sm font-bold text-arkon-gold underline-offset-4 hover:underline;
+  }
+
+  .arkon-form {
+    @apply grid gap-4 rounded-sm border border-white/10 bg-white/[0.055] p-5 shadow-arkon backdrop-blur md:grid-cols-2 md:p-7;
+  }
+
+  .arkon-field {
+    @apply grid gap-2 text-sm font-semibold text-white;
+  }
+
+  .arkon-field input,
+  .arkon-field select,
+  .arkon-field textarea {
+    @apply min-h-12 rounded-sm border border-white/10 bg-arkon-navy2 px-4 py-3 text-sm font-normal text-white outline-none transition placeholder:text-arkon-silver2 focus:border-arkon-gold focus:ring-2 focus:ring-arkon-gold/40;
+  }
+}

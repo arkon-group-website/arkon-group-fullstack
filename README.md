@@ -37,8 +37,6 @@ Confirmed company scope:
 - `public/` - Public logos and static assets.
 - `styles/` - Tailwind global stylesheet.
 - `types/` - Shared TypeScript types.
-- `docs/` - Planning and implementation documentation used to shape the site.
-- `schema/` - Source JSON-LD examples from the WordPress planning pack.
 
 ## Local Development
 
@@ -95,7 +93,7 @@ Most website copy and routing data is centralized in:
 
 - `content/site.ts`
 
-Use the planning documents in `docs/` as editorial references. Keep claims conservative and do not add additional ARKON Group companies unless the source files are updated and approved.
+Use the source planning documents from the original ARKON planning repository as editorial references. Keep claims conservative and do not add additional ARKON Group companies unless the source files are updated and approved.
 
 ## Quality Checks
 

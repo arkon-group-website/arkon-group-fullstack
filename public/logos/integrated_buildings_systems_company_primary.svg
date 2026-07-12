@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="96" viewBox="0 0 320 96" role="img" aria-labelledby="title desc">
+  <title id="title">Integrated Building Systems</title>
+  <desc id="desc">Integrated Building Systems lightweight logo mark.</desc>
+  <rect width="320" height="96" rx="8" fill="#061426"/>
+  <path d="M30 72V34l28-14 28 14v38H30Z" fill="#1659A8"/>
+  <path d="M43 72V43h30v29H43Z" fill="#0B1E36"/>
+  <path d="M50 50h7v7h-7zM62 50h7v7h-7zM50 62h7v7h-7zM62 62h7v7h-7z" fill="#C8A45D"/>
+  <text x="112" y="43" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">IBS</text>
+  <text x="112" y="65" fill="#D8DEE8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2">INTEGRATED BUILDING SYSTEMS</text>
+</svg>
