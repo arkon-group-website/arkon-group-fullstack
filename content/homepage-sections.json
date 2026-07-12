@@ -1,0 +1,19 @@
+{
+  "sections": [
+    "hero",
+    "trustStrip",
+    "groupEcosystem",
+    "coreCapabilities",
+    "complianceCommandCenter",
+    "industriesServed",
+    "whyArkonGroup",
+    "credentialsDownloads",
+    "projectRequestCTA",
+    "footer"
+  ],
+  "ctas": {
+    "primary": "Request a Technical Proposal",
+    "secondary": "Explore Group Companies",
+    "download": "Download Credentials"
+  }
+}

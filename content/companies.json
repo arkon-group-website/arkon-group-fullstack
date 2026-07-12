@@ -1,0 +1,83 @@
+{
+  "companies": [
+    {
+      "id": "aec",
+      "name": "ARKON Engineering Consultancy Co.",
+      "shortName": "AEC",
+      "arabicName": "شركة أركون للاستشارات الهندسية",
+      "description": "Engineering consultancy, fire and life safety, infrastructure, traffic, hydrology, supervision, and design review.",
+      "services": [
+        "Engineering consultancy",
+        "Fire and life safety",
+        "Traffic impact studies",
+        "Hydrology and drainage studies",
+        "Infrastructure engineering",
+        "Construction supervision",
+        "Design review"
+      ]
+    },
+    {
+      "id": "elite",
+      "name": "ELITE Security Consultancy Co.",
+      "shortName": "ELITE",
+      "arabicName": "شركة إيليت للاستشارات الأمنية",
+      "description": "SAIS/HCIS security consultancy, security risk assessment, authority readiness, and operational readiness.",
+      "services": [
+        "SAIS/HCIS consultancy",
+        "Security risk assessment",
+        "Concept of security design",
+        "Operational readiness",
+        "Data center security advisory",
+        "SEC-21 passive defence advisory"
+      ]
+    },
+    {
+      "id": "ibs",
+      "name": "Integrated Building Systems",
+      "shortName": "IBS",
+      "arabicName": "شركة أنظمة المباني المتكاملة",
+      "description": "Construction and technical works including civil works, MEP, finishing, steel structures, maintenance, and prefabricated units.",
+      "services": [
+        "Civil works",
+        "MEP works",
+        "Finishing works",
+        "Steel structures",
+        "Building maintenance",
+        "Fire alarm and fire protection works",
+        "Porta cabins and prefabricated units"
+      ]
+    },
+    {
+      "id": "qic",
+      "name": "Quality Inspection Company",
+      "shortName": "QIC",
+      "arabicName": "شركة فحوصات الجودة",
+      "description": "Soil, concrete, asphalt, foundation, material, water, and air quality testing.",
+      "services": [
+        "Soil testing",
+        "Concrete testing",
+        "Asphalt testing",
+        "Foundation testing",
+        "Construction material testing",
+        "Geotechnical studies",
+        "Water and air quality testing"
+      ]
+    },
+    {
+      "id": "tp-digital",
+      "name": "Turning Point Digital Marketing Co.",
+      "shortName": "TP Digital",
+      "arabicName": "شركة نقطة تحول للتسويق الرقمي",
+      "description": "Digital marketing, campaigns, social media, content creation, podcast studio services, and digital management software.",
+      "services": [
+        "Digital marketing strategy",
+        "Social media management",
+        "Paid campaigns",
+        "Content creation",
+        "Podcast studio services",
+        "Digital management software",
+        "Performance reporting"
+      ]
+    }
+  ]
+}
