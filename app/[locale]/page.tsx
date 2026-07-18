@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import type { Locale } from "@/types";
-import { industries, site, ui } from "@/content/site";
+import { site, ui } from "@/content/site";
 import { isLocale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/metadata";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -38,7 +38,20 @@ const trustStats = [
   { value: "KSA", en: "Saudi market focus", ar: "تركيز على السوق السعودي" }
 ];
 
-const credentialPlaceholders = ["ISO", "SCA", "SASO", "Vision 2030", "Company Profiles"];
+const complianceCards = [
+  { en: "Authority-facing documentation support", ar: "دعم مستندات موجهة للمتطلبات النظامية" },
+  { en: "Technical review and coordination records", ar: "مراجعة فنية وسجلات تنسيق" },
+  { en: "Gated credentials and profile handling", ar: "إدارة ملفات التعريف والاعتمادات عند الطلب" },
+  { en: "Service routing by company and specialty", ar: "توجيه الخدمات حسب الشركة والتخصص" }
+];
+
+const credentialCards = [
+  { en: "Group credentials package", ar: "حزمة ملفات المجموعة" },
+  { en: "Company profiles", ar: "ملفات الشركات" },
+  { en: "Service capability sheets", ar: "ملفات قدرات الخدمات" },
+  { en: "Prequalification documents", ar: "مستندات التأهيل المسبق" },
+  { en: "Request-only publication policy", ar: "سياسة نشر عند الطلب فقط" }
+];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: value } = await params;
@@ -91,6 +104,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </Section>
 
       <Section
+        className="relative overflow-hidden bg-arkon-navy text-white"
+        tone="dark"
+        eyebrow={isArabic ? "مركز الجاهزية" : "Compliance command center"}
+        title={isArabic ? "تنظيم المتطلبات الفنية من الاستفسار إلى التوجيه" : "Coordinating Technical Requirements from Inquiry to Routing"}
+        intro={isArabic ? "تعتمد لغة الموقع على الجاهزية والدعم الاستشاري دون ادعاء اعتماد أو موافقة غير موثقة." : "The website language stays focused on readiness and advisory support, without unsupported approval or certification claims."}
+      >
+        <div className="absolute inset-0 bg-command-grid bg-[length:44px_44px] opacity-[0.08]" />
+        <div className="relative grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {complianceCards.map((card, index) => (
+            <article key={card.en} className="rounded-2xl border border-white/10 bg-white/[0.08] p-6 backdrop-blur-xl">
+              <span className="grid h-12 w-12 place-items-center rounded-xl border border-arkon-gold/45 bg-arkon-gold/10 text-lg font-black text-arkon-gold">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3 className="mt-5 text-lg font-black leading-snug text-white">{card[locale]}</h3>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section
         eyebrow={isArabic ? "القطاعات التي نخدمها" : "Industries we serve"}
         title={isArabic ? "حلول للمشاريع في قطاعات رئيسية" : "Delivering Solutions Across Key Sectors"}
       >
@@ -98,7 +131,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           {sectorCards.map((sector, index) => (
             <article key={sector.en} className="group relative min-h-48 overflow-hidden rounded-xl border border-white bg-arkon-navy shadow-arkon">
               <Image
-                src="/images/arkon-pearl-gold-skyline.svg"
+                src={site.heroImage}
                 alt=""
                 fill
                 sizes="(min-width: 1280px) 16vw, (min-width: 640px) 33vw, 100vw"
@@ -129,14 +162,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
 
           <div className="relative min-h-64 overflow-hidden rounded-2xl border border-arkon-line bg-arkon-navy shadow-arkon">
-            <Image src="/images/arkon-pearl-gold-skyline.svg" alt="" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover opacity-80" />
+            <Image src={site.heroImage} alt="" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover opacity-80" />
             <div className="absolute inset-0 bg-gradient-to-r from-arkon-navy/90 via-arkon-navy/45 to-transparent" />
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="grid h-20 w-20 place-items-center rounded-full border border-arkon-gold bg-arkon-gold/90 text-2xl font-black text-arkon-navy shadow-glow">▶</span>
             </div>
             <div className="absolute bottom-6 start-6">
               <h3 className="text-2xl font-black text-white">{isArabic ? "نظرة على المجموعة" : "Our Group Overview"}</h3>
-              <p className="mt-1 text-sm font-bold text-arkon-gold">{isArabic ? "مكان مخصص للفيديو" : "Video placeholder"}</p>
+              <p className="mt-1 text-sm font-bold text-arkon-gold">{isArabic ? "مساحة فيديو عند توفره" : "Video area when approved"}</p>
             </div>
           </div>
         </div>
@@ -145,7 +178,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="py-10">
         <div className="arkon-container">
           <div className="arkon-navy-panel relative overflow-hidden rounded-3xl px-6 py-12 text-center sm:px-10">
-            <Image src="/images/arkon-pearl-gold-skyline.svg" alt="" fill sizes="100vw" className="object-cover opacity-20" />
+            <Image src={site.heroImage} alt="" fill sizes="100vw" className="object-cover opacity-20" />
             <div className="absolute inset-0 bg-gradient-to-r from-arkon-navy via-arkon-navy/86 to-arkon-navy2" />
             <div className="relative">
               <p className="arkon-eyebrow">{isArabic ? "ابدأ مشروعك" : "Start your project"}</p>
@@ -168,23 +201,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <Section
         className="pb-20"
-        eyebrow={isArabic ? "الاعتمادات والشراكات" : "Credentials & partnerships"}
-        title={isArabic ? "ملفات الاعتماد تُضاف بعد التأكيد" : "Credential References to Confirm Before Publication"}
-        intro={isArabic ? "هذه منطقة مخصصة لشعارات أو ملفات الاعتماد التي يتم تزويدها واعتمادها قبل الإطلاق." : "This area is ready for approved certification, authority, or partnership assets once they are supplied and cleared for publication."}
+        eyebrow={isArabic ? "الملفات والوثائق" : "Credentials & downloads"}
+        title={isArabic ? "مركز ملفات محافظ وجاهز للنشر المعتمد" : "A Controlled Download Center for Approved Assets"}
+        intro={isArabic ? "تتم إتاحة الملفات العامة فقط بعد مراجعة سياسة النشر، ويمكن طلب الملفات الحساسة عبر نموذج المشروع." : "Public files should be released only after publication review; sensitive credentials can be routed through the project request form."}
       >
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {credentialPlaceholders.map((label) => (
-            <div key={label} className="grid min-h-24 place-items-center rounded-xl border border-arkon-line bg-white px-4 text-center text-2xl font-black text-arkon-muted shadow-sm">
-              {label}
+          {credentialCards.map((card) => (
+            <div key={card.en} className="grid min-h-24 place-items-center rounded-xl border border-arkon-line bg-white px-4 text-center text-base font-black text-arkon-navy shadow-sm">
+              {card[locale]}
             </div>
           ))}
         </div>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {industries.slice(0, 3).map((industry) => (
-            <div key={industry.en} className="rounded-xl border border-arkon-line bg-white p-5 text-sm font-bold text-arkon-navy shadow-sm">
-              {industry[locale]}
-            </div>
-          ))}
+        <div className="mt-8 flex justify-center">
+          <LocaleLink locale={locale} href="/download-center" className="arkon-btn arkon-btn-gold">
+            {ui.downloadCenter[locale]}
+          </LocaleLink>
         </div>
       </Section>
     </>

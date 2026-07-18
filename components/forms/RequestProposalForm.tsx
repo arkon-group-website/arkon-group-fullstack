@@ -61,9 +61,22 @@ export function RequestProposalForm({ locale }: RequestProposalFormProps) {
     <form onSubmit={onSubmit} className="arkon-form" aria-label={isArabic ? "نموذج طلب عرض فني" : "Request proposal form"}>
       <Field label={isArabic ? "الاسم الكامل" : "Full name"} name="fullName" required />
       <Field label={isArabic ? "اسم الشركة" : "Company name"} name="companyName" required />
+      <Field label={isArabic ? "المسمى الوظيفي" : "Job title"} name="jobTitle" />
       <Field label={isArabic ? "البريد الإلكتروني" : "Email"} name="email" type="email" required />
       <Field label={isArabic ? "رقم الجوال" : "Mobile number"} name="mobile" required />
       <Field label={isArabic ? "موقع المشروع" : "Project location"} name="projectLocation" required />
+
+      <label className="arkon-field">
+        <span>{isArabic ? "نوع المشروع" : "Project type"}</span>
+        <select name="projectType" required>
+          <option value="">{isArabic ? "اختيار نوع المشروع" : "Select project type"}</option>
+          <option value="new-development">{isArabic ? "تطوير جديد" : "New development"}</option>
+          <option value="existing-facility">{isArabic ? "منشأة قائمة" : "Existing facility"}</option>
+          <option value="infrastructure">{isArabic ? "بنية تحتية" : "Infrastructure"}</option>
+          <option value="commercial">{isArabic ? "تجاري أو سكني" : "Commercial or residential"}</option>
+          <option value="digital">{isArabic ? "مشروع رقمي" : "Digital project"}</option>
+        </select>
+      </label>
 
       <label className="arkon-field">
         <span>{isArabic ? "الشركة أو الخدمة المطلوبة" : "Required company / service"}</span>
@@ -81,6 +94,8 @@ export function RequestProposalForm({ locale }: RequestProposalFormProps) {
         <span>{isArabic ? "وصف المشروع" : "Project description"}</span>
         <textarea name="description" rows={5} required placeholder={isArabic ? "اكتبوا ملخصاً عن نطاق المشروع والاحتياج المطلوب." : "Share the project scope, stage, and required support."} />
       </label>
+
+      <Field label={isArabic ? "رابط الرسومات أو المستندات" : "Drawings / document link"} name="documentLink" type="url" />
 
       <label className="arkon-field">
         <span>{isArabic ? "الجدول الزمني المطلوب" : "Required timeline"}</span>

@@ -11,9 +11,12 @@ export interface Company {
   name: LocalizedText;
   summary: LocalizedText;
   positioning: LocalizedText;
+  overview: LocalizedText;
   services: LocalizedText[];
   industries: LocalizedText[];
   strengths: LocalizedText[];
+  methodology: LocalizedText[];
+  proofPoints: LocalizedText[];
   cta: LocalizedText;
   logo: string;
 }
@@ -24,9 +27,12 @@ export interface Service {
   category: LocalizedText;
   title: LocalizedText;
   summary: LocalizedText;
+  covers: LocalizedText[];
   deliverables: LocalizedText[];
   clients: LocalizedText[];
   process: LocalizedText[];
+  complianceNote: LocalizedText;
+  relatedSlugs: string[];
   cta: LocalizedText;
 }
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import type { Locale } from "@/types";
-import { services, site } from "@/content/site";
+import { companies, services, site, t } from "@/content/site";
 import { isLocale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/metadata";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -34,6 +35,15 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         title={locale === "ar" ? "خدمات متخصصة عبر منظومة واحدة" : "Specialized services across one ecosystem"}
         intro={locale === "ar" ? "استكشف صفحات الخدمات ذات الأولوية عبر الشركات الخمس." : "Explore priority service pages across the five confirmed ARKON Group companies."}
       >
+        <div className="mb-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+          {companies.map((company) => (
+            <article key={company.id} className="arkon-card-premium p-5">
+              <Image src={company.logo} alt={t(locale, company.name)} width={170} height={68} className="mb-5 max-h-14 w-auto object-contain" />
+              <h2 className="text-lg font-black text-arkon-navy">{t(locale, company.name)}</h2>
+              <p className="mt-3 text-sm leading-7 text-arkon-muted">{t(locale, company.positioning)}</p>
+            </article>
+          ))}
+        </div>
         <ServiceGrid locale={locale} services={services} />
       </Section>
     </>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import type { Locale } from "@/types";
+import { site } from "@/content/site";
 import { isLocale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/metadata";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -33,6 +35,16 @@ export default async function DownloadCenterPage({ params }: { params: Promise<{
         title={locale === "ar" ? "ملفات التعريف والكتيبات" : "Profiles, Brochures, and Capability Sheets"}
         intro={locale === "ar" ? "يمكن ربط الملفات النهائية بعد اعتمادها وتأكيد سياسة النشر." : "Final files can be connected after approval and publication policy confirmation."}
       >
+        <div className="arkon-card-premium mb-8 overflow-hidden p-0">
+          <div className="relative min-h-72 bg-arkon-navy">
+            <Image src={site.heroImage} alt="" fill sizes="100vw" className="object-cover opacity-75" />
+            <div className="absolute inset-0 bg-gradient-to-r from-arkon-navy/92 via-arkon-navy/45 to-transparent" />
+            <div className="absolute bottom-7 start-7 max-w-2xl">
+              <p className="arkon-eyebrow">{locale === "ar" ? "إدارة أصول منظمة" : "Controlled asset handling"}</p>
+              <h2 className="mt-3 text-3xl font-black text-white">{locale === "ar" ? "ملفات عامة أو مقيدة حسب سياسة النشر" : "Open and gated files according to publication policy"}</h2>
+            </div>
+          </div>
+        </div>
         <DownloadCenter locale={locale} />
       </Section>
     </>

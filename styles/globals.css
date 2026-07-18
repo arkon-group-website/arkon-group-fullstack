@@ -50,6 +50,19 @@ a {
     @apply rounded-xl border border-arkon-line bg-white p-6 shadow-arkon transition duration-300 hover:-translate-y-1 hover:border-arkon-gold/45 hover:shadow-glow;
   }
 
+  .arkon-glass {
+    @apply border border-white/70 bg-white/80 shadow-arkon backdrop-blur-xl;
+  }
+
+  .arkon-card-premium {
+    @apply relative overflow-hidden rounded-2xl border border-arkon-line bg-white shadow-arkon transition duration-300 hover:-translate-y-1 hover:border-arkon-gold/45 hover:shadow-glow;
+  }
+
+  .arkon-card-premium::before {
+    content: "";
+    @apply absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-arkon-gold/70 to-transparent;
+  }
+
   .arkon-btn {
     @apply inline-flex min-h-11 items-center justify-center rounded-md px-5 py-3 text-center text-sm font-black transition focus:outline-none focus:ring-2 focus:ring-arkon-gold focus:ring-offset-2 focus:ring-offset-white;
   }
@@ -90,5 +103,48 @@ a {
 
   .arkon-gold-divider {
     @apply mx-auto my-3 h-px w-24 bg-gradient-to-r from-transparent via-arkon-gold to-transparent;
+  }
+
+  .arkon-list-check {
+    @apply relative ps-6;
+  }
+
+  .arkon-list-check::before {
+    content: "";
+    @apply absolute start-0 top-2.5 h-2 w-2 rounded-full bg-arkon-gold shadow-glow;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .arkon-float-slow {
+    animation: arkonFloat 7s ease-in-out infinite;
+  }
+
+  .arkon-glow-pulse {
+    animation: arkonGlow 5s ease-in-out infinite;
+  }
+}
+
+@keyframes arkonFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes arkonGlow {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.82;
+    transform: scale(1.05);
   }
 }

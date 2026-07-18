@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Locale } from "@/types";
 import type { ReactNode } from "react";
-import { navigation, services, site, ui } from "@/content/site";
+import { companies, navigation, services, site, t, ui } from "@/content/site";
 import { LocaleLink } from "@/components/layout/LocaleLink";
 
 interface FooterProps {
@@ -13,11 +13,13 @@ export function Footer({ locale }: FooterProps) {
   const topServices = services.slice(0, 7);
 
   return (
-    <footer className="bg-arkon-navy text-white">
-      <div className="arkon-container grid gap-10 py-14 lg:grid-cols-[1.25fr_0.7fr_0.85fr_0.75fr_0.95fr]">
+    <footer className="relative overflow-hidden bg-arkon-navy text-white">
+      <div className="absolute inset-0 bg-command-grid bg-[length:54px_54px] opacity-[0.06]" />
+      <div className="absolute -start-28 top-10 h-72 w-72 rounded-full bg-arkon-gold/10 blur-3xl" />
+      <div className="arkon-container relative grid gap-10 py-14 lg:grid-cols-[1.25fr_0.7fr_0.9fr_0.85fr_0.75fr_0.95fr]">
         <div>
-          <div className="inline-flex rounded-xl bg-white p-2">
-            <Image src="/logos/arkon-group-logo.svg" alt="ARKON Group" width={170} height={50} className="h-12 w-auto" />
+          <div className="inline-flex rounded-xl bg-white p-2 shadow-glow">
+            <Image src={site.logo} alt="ARKON Group" width={170} height={50} className="h-12 w-auto object-contain" />
           </div>
           <p className="mt-5 max-w-sm text-sm leading-7 text-white/70">{site.description[locale]}</p>
           <div className="mt-6 flex gap-3 text-sm font-black text-white/70">
@@ -33,6 +35,14 @@ export function Footer({ locale }: FooterProps) {
           {navigation.map((item) => (
             <LocaleLink key={item.href} locale={locale} href={item.href}>
               {item.label[locale]}
+            </LocaleLink>
+          ))}
+        </FooterColumn>
+
+        <FooterColumn title={isArabic ? "الشركات" : "Companies"}>
+          {companies.map((company) => (
+            <LocaleLink key={company.id} locale={locale} href={`/companies/${company.slug}`}>
+              {t(locale, company.name)}
             </LocaleLink>
           ))}
         </FooterColumn>
@@ -65,7 +75,7 @@ export function Footer({ locale }: FooterProps) {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="arkon-container flex flex-col gap-3 py-5 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
+        <div className="arkon-container relative flex flex-col gap-3 py-5 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
           <p>{isArabic ? "© 2026 مجموعة أركون. جميع الحقوق محفوظة." : "© 2026 ARKON Group. All rights reserved."}</p>
           <p>{isArabic ? "مصمم بمعايير مؤسسية للمشاريع السعودية." : "Designed with excellence. Built for the future."}</p>
         </div>
