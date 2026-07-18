@@ -23,7 +23,7 @@ export default async function LocaleLayout({
   const locale = value as Locale;
 
   return (
-    <div lang={locale} dir={dir(locale)} className="min-h-screen bg-arkon-navy text-arkon-ink antialiased">
+    <div lang={locale} dir={dir(locale)} className="min-h-screen bg-arkon-pearl text-arkon-ink antialiased">
       <JsonLd data={[organizationSchema(locale), websiteSchema(locale)]} />
       <Header locale={locale} />
       <main>{children}</main>

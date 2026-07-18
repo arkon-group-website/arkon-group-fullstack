@@ -14,19 +14,19 @@ export function DownloadCenter({ locale }: DownloadCenterProps) {
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-arkon-gold">{t(locale, asset.category)}</p>
-              <h3 className="mt-4 text-xl font-bold text-white">{t(locale, asset.title)}</h3>
+              <h3 className="mt-4 text-xl font-black text-arkon-navy">{t(locale, asset.title)}</h3>
             </div>
-            <span className="rounded-sm border border-white/10 px-2 py-1 text-xs text-arkon-silver2">{asset.type}</span>
+            <span className="rounded-md border border-arkon-line bg-arkon-pearl2 px-2 py-1 text-xs font-bold text-arkon-muted">{asset.type}</span>
           </div>
-          <p className="mt-3 text-sm leading-7 text-arkon-silver">{t(locale, asset.description)}</p>
-          <dl className="mt-5 grid grid-cols-2 gap-3 text-xs text-arkon-silver2">
+          <p className="mt-3 text-sm leading-7 text-arkon-muted">{t(locale, asset.description)}</p>
+          <dl className="mt-5 grid grid-cols-2 gap-3 text-xs text-arkon-muted">
             <div>
               <dt>{locale === "ar" ? "الشركة" : "Company"}</dt>
-              <dd className="mt-1 text-white">{t(locale, asset.company)}</dd>
+              <dd className="mt-1 font-bold text-arkon-navy">{t(locale, asset.company)}</dd>
             </div>
             <div>
               <dt>{locale === "ar" ? "الإصدار" : "Version"}</dt>
-              <dd className="mt-1 text-white">{asset.version}</dd>
+              <dd className="mt-1 font-bold text-arkon-navy">{asset.version}</dd>
             </div>
           </dl>
           <LocaleLink locale={locale} href="/contact" className="arkon-btn arkon-btn-ghost mt-6 w-full">

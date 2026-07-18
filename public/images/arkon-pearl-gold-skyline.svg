@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Pearl and gold Saudi engineering skyline</title>
+  <desc id="desc">A premium light corporate skyline scene with navy towers, gold command-center arcs, and infrastructure lines.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".48" stop-color="#f7f6f2"/>
+      <stop offset="1" stop-color="#efe7d6"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#173b63"/>
+      <stop offset=".55" stop-color="#0f2b46"/>
+      <stop offset="1" stop-color="#07192b"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".82"/>
+      <stop offset=".4" stop-color="#9db5c9" stop-opacity=".48"/>
+      <stop offset="1" stop-color="#0f2b46" stop-opacity=".9"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".08"/>
+      <stop offset=".55" stop-color="#c79a3b" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".2"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="68%" cy="31%" r="31%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".15" stop-color="#e3c27a" stop-opacity=".78"/>
+      <stop offset=".5" stop-color="#e3c27a" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#0f2b46" flood-opacity=".18"/>
+    </filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0v44" fill="none" stroke="#173b63" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#sky)"/>
+  <rect width="1200" height="600" fill="url(#grid)" opacity=".7"/>
+  <circle cx="812" cy="172" r="290" fill="url(#sun)"/>
+  <path d="M60 425C210 305 375 254 555 274c165 19 279 108 403 86 82-15 141-59 186-105" fill="none" stroke="#c79a3b" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M610 356c90-245 336-246 438-82" fill="none" stroke="#c79a3b" stroke-opacity=".62" stroke-width="3"/>
+  <path d="M652 344c77-186 252-201 350-82" fill="none" stroke="#e3c27a" stroke-opacity=".55" stroke-width="1.5"/>
+  <path d="M743 92a92 92 0 1 0 184 0" fill="none" stroke="#c79a3b" stroke-opacity=".28" stroke-width="2" stroke-dasharray="7 11"/>
+
+  <g filter="url(#softShadow)">
+    <path d="M660 418V202l74-44 61 44v216z" fill="url(#glass)" stroke="#ffffff" stroke-opacity=".65"/>
+    <path d="M704 418V118l69-78 73 78v300z" fill="url(#navy)" stroke="#ffffff" stroke-opacity=".7"/>
+    <path d="M777 418V178l84-94 66 94v240z" fill="url(#glass)" stroke="#ffffff" stroke-opacity=".72"/>
+    <path d="M884 418V83l80 52v283z" fill="url(#navy)" stroke="#ffffff" stroke-opacity=".72"/>
+    <path d="M955 418V197l58-54 58 54v221z" fill="url(#glass)" stroke="#ffffff" stroke-opacity=".66"/>
+    <path d="M566 418V251l52-72 51 72v167z" fill="url(#navy)" stroke="#ffffff" stroke-opacity=".55"/>
+    <path d="M1028 418V265l50-67 42 67v153z" fill="url(#navy)" stroke="#ffffff" stroke-opacity=".5"/>
+  </g>
+
+  <g opacity=".78" stroke="#ffffff" stroke-width="3">
+    <path d="M721 151h88M713 198h116M710 246h130M710 292h130M710 340h130"/>
+    <path d="M895 146h56M895 193h56M895 240h56M895 287h56M895 334h56"/>
+    <path d="M789 204h72M789 250h92M789 296h98M789 342h98"/>
+  </g>
+  <g opacity=".5" stroke="#e3c27a" stroke-width="2">
+    <path d="M676 244h50M676 284h50M676 324h50"/>
+    <path d="M976 226h50M976 268h50M976 310h50"/>
+  </g>
+
+  <path d="M0 457c185-45 361-50 529-12 126 29 251 37 376 21 110-14 207-40 295-78v212H0z" fill="#0f2b46" opacity=".08"/>
+  <path d="M0 520c230-76 421-101 573-73 92 17 172 59 262 61 96 2 210-43 365-139v231H0z" fill="#0f2b46" opacity=".16"/>
+  <path d="M0 532c176-72 357-100 543-83 142 13 254 52 356 43 109-10 203-72 301-162" fill="none" stroke="#ffffff" stroke-opacity=".8" stroke-width="12"/>
+  <path d="M0 557c176-72 357-100 543-83 142 13 254 52 356 43 109-10 203-72 301-162" fill="none" stroke="#0f2b46" stroke-opacity=".18" stroke-width="44"/>
+  <path d="M0 532c176-72 357-100 543-83 142 13 254 52 356 43 109-10 203-72 301-162" fill="none" stroke="url(#road)" stroke-width="4"/>
+  <path d="M516 459c178 17 278 62 398 45 111-16 201-82 286-151" fill="none" stroke="#c79a3b" stroke-opacity=".75" stroke-width="3"/>
+  <path d="M554 486c157 8 277 45 403 15 91-22 166-80 243-143" fill="none" stroke="#ffffff" stroke-opacity=".6" stroke-width="2"/>
+
+  <g fill="#c79a3b" opacity=".85">
+    <circle cx="726" cy="116" r="4"/>
+    <circle cx="936" cy="92" r="3"/>
+    <circle cx="1045" cy="183" r="4"/>
+    <circle cx="611" cy="241" r="3"/>
+  </g>
+  <g stroke="#c79a3b" stroke-opacity=".34" fill="none">
+    <circle cx="1082" cy="152" r="48"/>
+    <circle cx="1082" cy="152" r="72"/>
+    <path d="M1082 75v154M1005 152h154"/>
+  </g>
+</svg>

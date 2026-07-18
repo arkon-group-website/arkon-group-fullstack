@@ -101,7 +101,7 @@ export function RequestProposalForm({ locale }: RequestProposalFormProps) {
         </select>
       </label>
 
-      <label className="md:col-span-2 flex items-start gap-3 rounded-sm border border-white/10 bg-white/[0.04] p-4 text-sm leading-6 text-arkon-silver">
+      <label className="md:col-span-2 flex items-start gap-3 rounded-xl border border-arkon-line bg-arkon-pearl2 p-4 text-sm leading-6 text-arkon-muted">
         <input name="consent" value="accepted" type="checkbox" required className="mt-1 h-4 w-4 accent-arkon-gold" />
         <span>{isArabic ? "أوافق على استخدام مجموعة أركون للمعلومات المقدمة لمراجعة طلبي والتواصل معي بشأن الخدمة المطلوبة." : "I agree that ARKON Group may use the submitted information to review my inquiry and contact me about the requested service."}</span>
       </label>
@@ -111,7 +111,7 @@ export function RequestProposalForm({ locale }: RequestProposalFormProps) {
           {status === "submitting" ? (isArabic ? "جار الإرسال..." : "Submitting...") : (isArabic ? "إرسال معلومات المشروع" : "Submit Project Information")}
         </button>
         {message ? (
-          <p className={status === "error" ? "mt-4 text-sm text-red-200" : "mt-4 text-sm text-emerald-200"} role="status">
+          <p className={status === "error" ? "mt-4 text-sm font-bold text-red-700" : "mt-4 text-sm font-bold text-emerald-700"} role="status">
             {message}
           </p>
         ) : null}

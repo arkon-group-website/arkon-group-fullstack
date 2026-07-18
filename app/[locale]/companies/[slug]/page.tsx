@@ -51,25 +51,25 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
       >
         <div className="grid gap-5 lg:grid-cols-3">
           <article className="arkon-card lg:col-span-2">
-            <h2 className="text-2xl font-bold text-white">{locale === "ar" ? "الخدمات الرئيسية" : "Key services"}</h2>
+            <h2 className="text-2xl font-black text-arkon-navy">{locale === "ar" ? "الخدمات الرئيسية" : "Key services"}</h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {company.services.map((service) => (
-                <div key={service.en} className="rounded-sm border border-white/10 bg-white/[0.04] p-4 text-sm text-arkon-silver">
+                <div key={service.en} className="rounded-xl border border-arkon-line bg-arkon-pearl2 p-4 text-sm font-semibold text-arkon-muted">
                   {t(locale, service)}
                 </div>
               ))}
             </div>
           </article>
           <article className="arkon-card">
-            <h2 className="text-2xl font-bold text-white">{locale === "ar" ? "نقاط القوة" : "Strengths"}</h2>
-            <ul className="mt-5 grid gap-3 text-sm leading-7 text-arkon-silver">
+            <h2 className="text-2xl font-black text-arkon-navy">{locale === "ar" ? "نقاط القوة" : "Strengths"}</h2>
+            <ul className="mt-5 grid gap-3 text-sm leading-7 text-arkon-muted">
               {company.strengths.map((strength) => <li key={strength.en}>{t(locale, strength)}</li>)}
             </ul>
           </article>
         </div>
       </Section>
 
-      <Section className="bg-arkon-navy2/55" title={locale === "ar" ? "خدمات مرتبطة" : "Related service pages"}>
+      <Section className="bg-white" title={locale === "ar" ? "خدمات مرتبطة" : "Related service pages"}>
         <ServiceGrid locale={locale} services={companyServices} />
         <LocaleLink locale={locale} href="/contact" className="arkon-btn arkon-btn-gold mt-8">
           {company.cta[locale] || ui.requestProposal[locale]}

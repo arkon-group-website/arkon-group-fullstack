@@ -41,23 +41,23 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             { en: "Operating model", ar: "نموذج العمل", bodyEn: "Route each inquiry to the company most suitable for the requested service.", bodyAr: "توجيه كل طلب إلى الشركة المناسبة حسب الخدمة المطلوبة." }
           ].map((item) => (
             <article key={item.en} className="arkon-card">
-              <h2 className="text-2xl font-bold text-white">{locale === "ar" ? item.ar : item.en}</h2>
-              <p className="mt-4 text-sm leading-7 text-arkon-silver">{locale === "ar" ? item.bodyAr : item.bodyEn}</p>
+              <h2 className="text-2xl font-black text-arkon-navy">{locale === "ar" ? item.ar : item.en}</h2>
+              <p className="mt-4 text-sm leading-7 text-arkon-muted">{locale === "ar" ? item.bodyAr : item.bodyEn}</p>
             </article>
           ))}
         </div>
       </Section>
 
       <Section
-        className="bg-arkon-navy2/55"
+        className="bg-white"
         eyebrow={locale === "ar" ? "هيكل المجموعة" : "Company structure"}
         title={locale === "ar" ? "الشركات الخمس المؤكدة" : "The five confirmed companies"}
       >
         <div className="grid gap-4 md:grid-cols-2">
           {companies.map((company) => (
             <LocaleLink key={company.id} locale={locale} href={`/companies/${company.slug}`} className="arkon-card block">
-              <h3 className="text-xl font-bold text-white">{t(locale, company.name)}</h3>
-              <p className="mt-3 text-sm leading-7 text-arkon-silver">{t(locale, company.summary)}</p>
+              <h3 className="text-xl font-black text-arkon-navy">{t(locale, company.name)}</h3>
+              <p className="mt-3 text-sm leading-7 text-arkon-muted">{t(locale, company.summary)}</p>
             </LocaleLink>
           ))}
         </div>

@@ -5,7 +5,21 @@ import { normalizeBaseUrl } from "@/lib/utils";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = normalizeBaseUrl();
-  const staticPaths = ["", "/about", "/companies", "/services", "/credentials", "/contact", "/privacy", "/terms"];
+  const staticPaths = [
+    "",
+    "/about",
+    "/companies",
+    "/services",
+    "/industries",
+    "/projects",
+    "/insights",
+    "/credentials",
+    "/download-center",
+    "/contact",
+    "/request-proposal",
+    "/privacy",
+    "/terms"
+  ];
   const companyPaths = companies.map((company) => `/companies/${company.slug}`);
   const servicePaths = services.map((service) => `/services/${service.slug}`);
   const paths = [...staticPaths, ...companyPaths, ...servicePaths];

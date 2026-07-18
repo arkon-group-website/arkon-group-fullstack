@@ -15,10 +15,12 @@ export const site = {
 
 export const navigation: NavItem[] = [
   { label: { en: "Home", ar: "الرئيسية" }, href: "/" },
-  { label: { en: "About", ar: "عن المجموعة" }, href: "/about" },
+  { label: { en: "About Us", ar: "عن المجموعة" }, href: "/about" },
   { label: { en: "Companies", ar: "الشركات" }, href: "/companies" },
   { label: { en: "Services", ar: "الخدمات" }, href: "/services" },
-  { label: { en: "Credentials", ar: "ملفات التعريف" }, href: "/credentials" },
+  { label: { en: "Industries", ar: "القطاعات" }, href: "/industries" },
+  { label: { en: "Projects", ar: "المشاريع" }, href: "/projects" },
+  { label: { en: "Insights", ar: "الرؤى" }, href: "/insights" },
   { label: { en: "Contact", ar: "التواصل" }, href: "/contact" }
 ];
 
@@ -156,9 +158,12 @@ export const downloads: DownloadAsset[] = [
 
 export const ui = {
   requestProposal: { en: "Request a Technical Proposal", ar: "طلب عرض فني" },
+  requestProposalShort: { en: "Request Proposal", ar: "طلب عرض" },
   exploreServices: { en: "Explore Services", ar: "استكشاف الخدمات" },
   viewCompanies: { en: "View Companies", ar: "عرض الشركات" },
   downloadProfile: { en: "Download Company Profile", ar: "تحميل ملف الشركة" },
+  downloadCenter: { en: "Download Center", ar: "مركز التنزيلات" },
+  contactUs: { en: "Contact Us", ar: "اتصل بنا" },
   speakTeam: { en: "Speak to Our Team", ar: "تحدث مع فريقنا" },
   gated: { en: "Request access", ar: "طلب الوصول" },
   download: { en: "Download", ar: "تحميل" },

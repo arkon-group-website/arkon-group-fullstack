@@ -25,7 +25,7 @@ export default async function TermsPage({ params }: { params: Promise<{ locale: 
       title={locale === "ar" ? "الشروط وإخلاء المسؤولية" : "Terms and Disclaimer"}
       intro={locale === "ar" ? "المحتوى المنشور لأغراض التعريف بالخدمات وتوجيه الطلبات، ولا يمثل عرضاً تعاقدياً إلا عند تأكيده رسمياً." : "Website content is provided for service introduction and inquiry routing, and does not represent a contractual offer unless formally confirmed."}
     >
-      <div className="arkon-card max-w-4xl text-sm leading-8 text-arkon-silver">
+      <div className="arkon-card mx-auto max-w-4xl text-sm leading-8 text-arkon-muted">
         <p>{locale === "ar" ? "يجب مراجعة التفاصيل الفنية ونطاق الخدمات والمتطلبات الخاصة بكل مشروع مع الفريق المختص قبل الاعتماد على أي معلومات لأغراض تنفيذية." : "Technical details, service scope, and project-specific requirements should be reviewed with the relevant team before relying on any information for execution decisions."}</p>
       </div>
     </Section>

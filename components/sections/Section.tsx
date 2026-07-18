@@ -13,10 +13,10 @@ export function Section({ eyebrow, title, intro, children, className }: SectionP
   return (
     <section className={cx("py-16 sm:py-20", className)}>
       <div className="arkon-container">
-        <div className="mb-9 max-w-3xl">
+        <div className="mx-auto mb-9 max-w-3xl text-center">
           {eyebrow ? <p className="arkon-eyebrow">{eyebrow}</p> : null}
           <h2 className="arkon-section-title">{title}</h2>
-          {intro ? <p className="mt-4 text-base leading-8 text-arkon-silver">{intro}</p> : null}
+          {intro ? <p className="arkon-section-intro">{intro}</p> : null}
         </div>
         {children}
       </div>

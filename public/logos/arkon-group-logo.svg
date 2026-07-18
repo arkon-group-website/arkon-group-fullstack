@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="104" viewBox="0 0 360 104" role="img" aria-labelledby="title desc">
+  <title id="title">ARKON Group</title>
+  <desc id="desc">ARKON Group corporate logo mark.</desc>
+  <rect width="360" height="104" rx="16" fill="transparent"/>
+  <path d="M28 76 56 26l28 50H69L56 52 43 76H28Z" fill="#C79A3B"/>
+  <path d="M56 18 94 82H78L56 42 34 82H18L56 18Z" fill="#0F2B46"/>
+  <path d="M56 37 73 68H62l-6-11-6 11H39l17-31Z" fill="#F7F6F2"/>
+  <text x="112" y="47" fill="#0F2B46" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="1">ARKON</text>
+  <text x="114" y="69" fill="#173B63" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="4">GROUP</text>
+</svg>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 * {
@@ -16,8 +16,11 @@ html {
 
 body {
   margin: 0;
-  background: #061426;
-  color: #eaf0f7;
+  background:
+    radial-gradient(circle at top left, rgba(227, 194, 122, 0.16), transparent 28rem),
+    radial-gradient(circle at top right, rgba(23, 59, 99, 0.08), transparent 30rem),
+    #f7f6f2;
+  color: #0f2b46;
 }
 
 a {
@@ -27,7 +30,7 @@ a {
 
 ::selection {
   background: rgba(200, 164, 93, 0.45);
-  color: white;
+  color: #0f2b46;
 }
 
 @layer components {
@@ -36,44 +39,56 @@ a {
   }
 
   .arkon-eyebrow {
-    @apply text-xs font-bold uppercase tracking-[0.28em] text-arkon-gold;
+    @apply text-xs font-black uppercase tracking-[0.24em] text-arkon-gold;
   }
 
   .arkon-section-title {
-    @apply mt-3 text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl;
+    @apply mt-3 text-3xl font-black leading-tight text-arkon-navy sm:text-4xl lg:text-5xl;
   }
 
   .arkon-card {
-    @apply rounded-sm border border-white/10 bg-white/[0.055] p-6 shadow-arkon backdrop-blur transition duration-300 hover:border-arkon-gold/45 hover:bg-white/[0.075];
+    @apply rounded-xl border border-arkon-line bg-white p-6 shadow-arkon transition duration-300 hover:-translate-y-1 hover:border-arkon-gold/45 hover:shadow-glow;
   }
 
   .arkon-btn {
-    @apply inline-flex min-h-11 items-center justify-center rounded-sm px-5 py-3 text-center text-sm font-bold transition focus:outline-none focus:ring-2 focus:ring-arkon-gold focus:ring-offset-2 focus:ring-offset-arkon-navy;
+    @apply inline-flex min-h-11 items-center justify-center rounded-md px-5 py-3 text-center text-sm font-black transition focus:outline-none focus:ring-2 focus:ring-arkon-gold focus:ring-offset-2 focus:ring-offset-white;
   }
 
   .arkon-btn-gold {
-    @apply bg-arkon-gold text-arkon-navy hover:bg-arkon-gold2;
+    @apply bg-gradient-to-r from-arkon-gold to-arkon-gold2 text-arkon-navy shadow-glow hover:-translate-y-0.5;
   }
 
   .arkon-btn-ghost {
-    @apply border border-white/15 bg-white/[0.045] text-white hover:border-arkon-gold hover:bg-white/[0.075];
+    @apply border border-arkon-gold/55 bg-white/75 text-arkon-navy hover:border-arkon-gold hover:bg-arkon-beige/45;
   }
 
   .arkon-text-link {
-    @apply inline-flex text-sm font-bold text-arkon-gold underline-offset-4 hover:underline;
+    @apply inline-flex items-center gap-2 text-sm font-black text-arkon-gold underline-offset-4 hover:text-arkon-navy hover:underline;
   }
 
   .arkon-form {
-    @apply grid gap-4 rounded-sm border border-white/10 bg-white/[0.055] p-5 shadow-arkon backdrop-blur md:grid-cols-2 md:p-7;
+    @apply grid gap-4 rounded-2xl border border-arkon-line bg-white p-5 shadow-arkon md:grid-cols-2 md:p-7;
   }
 
   .arkon-field {
-    @apply grid gap-2 text-sm font-semibold text-white;
+    @apply grid gap-2 text-sm font-bold text-arkon-navy;
   }
 
   .arkon-field input,
   .arkon-field select,
   .arkon-field textarea {
-    @apply min-h-12 rounded-sm border border-white/10 bg-arkon-navy2 px-4 py-3 text-sm font-normal text-white outline-none transition placeholder:text-arkon-silver2 focus:border-arkon-gold focus:ring-2 focus:ring-arkon-gold/40;
+    @apply min-h-12 rounded-md border border-arkon-line bg-arkon-pearl2 px-4 py-3 text-sm font-normal text-arkon-navy outline-none transition placeholder:text-arkon-muted focus:border-arkon-gold focus:bg-white focus:ring-2 focus:ring-arkon-gold/25;
+  }
+
+  .arkon-section-intro {
+    @apply mt-4 text-base leading-8 text-arkon-muted;
+  }
+
+  .arkon-navy-panel {
+    @apply bg-navy-gold text-white shadow-arkon;
+  }
+
+  .arkon-gold-divider {
+    @apply mx-auto my-3 h-px w-24 bg-gradient-to-r from-transparent via-arkon-gold to-transparent;
   }
 }

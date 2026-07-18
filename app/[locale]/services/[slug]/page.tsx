@@ -67,8 +67,8 @@ export default async function ServicePage({ params }: { params: Promise<{ locale
 function InfoList({ title, items }: { title: string; items: string[] }) {
   return (
     <article className="arkon-card">
-      <h2 className="text-2xl font-bold text-white">{title}</h2>
-      <ul className="mt-5 grid gap-3 text-sm leading-7 text-arkon-silver">
+      <h2 className="text-2xl font-black text-arkon-navy">{title}</h2>
+      <ul className="mt-5 grid gap-3 text-sm leading-7 text-arkon-muted">
         {items.map((item) => <li key={item}>{item}</li>)}
       </ul>
     </article>
